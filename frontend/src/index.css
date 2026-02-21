@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 focus:ring-slate-400;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-xl shadow-sm border border-slate-100;
+  }
+
+  /* KPI Gradient Accents */
+  .accent-blue::before,
+  .accent-green::before,
+  .accent-purple::before,
+  .accent-orange::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .accent-blue::before {
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.35) 0%, transparent 100%);
+  }
+
+  .accent-green::before {
+    background: linear-gradient(to right, rgba(34, 197, 94, 0.35) 0%, transparent 100%);
+  }
+
+  .accent-purple::before {
+    background: linear-gradient(to right, rgba(168, 85, 247, 0.35) 0%, transparent 100%);
+  }
+
+  .accent-orange::before {
+    background: linear-gradient(to right, rgba(249, 115, 22, 0.35) 0%, transparent 100%);
+  }
+
+  /* Glassmorphism Themes */
+  .glass-lavender {
+    background: linear-gradient(135deg, rgba(235, 238, 255, 0.92), rgba(217, 224, 255, 0.95));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-yellow {
+    background: linear-gradient(135deg, #fffbeb, #fbecb3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(251, 191, 36, 0.1);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-green {
+    background: linear-gradient(135deg, #f0fdf4, #9df1ba);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(34, 197, 94, 0.1);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-blue {
+    background: linear-gradient(135deg, #f0f7ff, #99d0f5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-purple {
+    background: linear-gradient(135deg, #f5f3ff, #d4ccf8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-orange {
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(249, 115, 22, 0.1);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.1);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.18);
+  }
+
+  /* Modern Pill Button */
+  .btn-green-pill {
+    @apply px-6 py-2 bg-[#10b981] text-white rounded-full font-medium transition-all duration-300 hover:bg-[#065f46] shadow-md hover:shadow-lg active:scale-95 text-sm;
+  }
+}
