@@ -59,7 +59,7 @@ Managing internship programs in organizations is chaotic. Mentors juggle multipl
 ```
 ┌──────────────────────────────────────────────────────┐
 │                    CLIENT (React + Vite)             │
-│   Login → AuthContext → Role-Based Dashboard        │
+│   Login → AuthContext → Role-Based Dashboard         │
 │   Intern Dashboard | Mentor Dashboard | Admin Panel  │
 └─────────────────────┬────────────────────────────────┘
                       │ HTTP (Axios + JWT Token)
@@ -68,12 +68,12 @@ Managing internship programs in organizations is chaotic. Mentors juggle multipl
 │                  SERVER (Express.js)                 │
 │   server.js → Routes → authMiddleware → Controllers  │
 │                                                      │
-│   /api/auth        → Auth Module                    │
-│   /api/tasks       → Task Module                    │
-│   /api/users       → User Module                    │
-│   /api/performance → Performance Module             │
-│   /api/ai-feedback → AI Service (Groq/LLaMA)       │
-│   /api/activity    → Activity Log Module            │
+│   /api/auth        → Auth Module                     │
+│   /api/tasks       → Task Module                     │
+│   /api/users       → User Module                     │
+│   /api/performance → Performance Module              │
+│   /api/ai-feedback → AI Service (Groq/LLaMA)         │
+│   /api/activity    → Activity Log Module             │
 └─────────────────────┬────────────────────────────────┘
                       │ Mongoose ODM
                       ▼
